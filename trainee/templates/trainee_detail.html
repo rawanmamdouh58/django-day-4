@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Trainee Details{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h2>Trainee Details</h2>
+        </div>
+        <div class="card-body">
+            <p><strong>Name:</strong> {{ trainee.name }}</p>
+            <p><strong>Email:</strong> {{ trainee.email }}</p>
+            <p><strong>Course:</strong>
+                {% if trainee.course %}
+                    {{ trainee.course.name }}
+                {% else %}
+                    No Course Assigned
+                {% endif %}
+            </p>
+            {% if trainee.image %}
+                <img src="{{ trainee.image.url }}" alt="{{ trainee.name }}" class="img-fluid">
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
