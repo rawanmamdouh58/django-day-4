@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'trainee.apps.TraineeConfig',
     'course.apps.CourseConfig',
     'users.apps.UsersConfig',
+    'rest_framework',
+    
 ]
 
 MIDDLEWARE = [
@@ -84,7 +86,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': 5432,
         'USER': 'postgres',
-        'PASSWORD': '1234'
+        'PASSWORD': '01028495337'
     }
 }
 
